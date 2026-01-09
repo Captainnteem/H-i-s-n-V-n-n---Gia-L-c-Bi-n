@@ -4,8 +4,8 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    /* FIX MOBILE */
-    min-height: clamp(220px, 45vw, 520px);
+    /* Chiều cao responsive – KHÔNG dùng vh cố định */
+    min-height: clamp(260px, 40vw, 520px);
     height: auto;
 
     display: flex;
@@ -14,7 +14,6 @@
     justify-content: center;
     color: var(--standard-white);
 }
-
 
 .content {
     display: flex;
@@ -35,7 +34,6 @@
 }
 
 .subtitle {
-    
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -44,11 +42,9 @@
 
 .ctaButton {
     width: 180px;
-    
 }
 
 .ctaLink {
-    
     text-transform: uppercase;
     color: var(--standard-white);
     border-bottom: 1px solid var(--standard-white);
@@ -66,9 +62,10 @@
     text-transform: uppercase;
 }
 
+/* Tablet */
 @media (max-width: 800px) {
     .root {
-        min-height: 50vh;
+        min-height: clamp(240px, 45vw, 420px);
     }
 
     .title {
@@ -82,7 +79,13 @@
     }
 }
 
+/* Mobile */
 @media (max-width: 500px) {
+    .root {
+        min-height: 240px;
+        background-size: contain; /* mobile ưu tiên co ảnh */
+    }
+
     .content {
         padding: 0px 32px;
     }
