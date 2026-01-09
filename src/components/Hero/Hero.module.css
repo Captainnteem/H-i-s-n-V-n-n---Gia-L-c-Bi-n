@@ -2,11 +2,7 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-
-    /* Chiều cao responsive – KHÔNG dùng vh cố định */
-    min-height: clamp(260px, 40vw, 520px);
-    height: auto;
+    min-height: 80vh;
 
     display: flex;
     flex-direction: column;
@@ -62,10 +58,9 @@
     text-transform: uppercase;
 }
 
-/* Tablet */
 @media (max-width: 800px) {
     .root {
-        min-height: clamp(240px, 45vw, 420px);
+        min-height: 50vh;
     }
 
     .title {
@@ -79,27 +74,8 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 500px) {
-    .root {
-        min-height: 240px;
-        background-size: contain;
-        background-position: center;
-
-        /* FIX lệch chữ */
-        justify-content: flex-end;
-        padding: 28px 0 36px;
-    }
-
     .content {
         padding: 0px 32px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .title,
-    .subtitle,
-    .header {
-        text-align: center;
     }
 }
