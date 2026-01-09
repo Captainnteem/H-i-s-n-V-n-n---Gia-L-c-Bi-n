@@ -2,7 +2,11 @@
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    background-position: center;
+
+    /* FIX MOBILE */
+    min-height: clamp(220px, 45vw, 520px);
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -10,6 +14,7 @@
     justify-content: center;
     color: var(--standard-white);
 }
+
 
 .content {
     display: flex;
