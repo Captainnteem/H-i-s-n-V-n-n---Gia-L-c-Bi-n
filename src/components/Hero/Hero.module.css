@@ -83,10 +83,23 @@
 @media (max-width: 500px) {
     .root {
         min-height: 240px;
-        background-size: contain; /* mobile ưu tiên co ảnh */
+        background-size: contain;
+        background-position: center;
+
+        /* FIX lệch chữ */
+        justify-content: flex-end;
+        padding: 28px 0 36px;
     }
 
     .content {
         padding: 0px 32px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .title,
+    .subtitle,
+    .header {
+        text-align: center;
     }
 }
